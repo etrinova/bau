@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 2vh;
+
+}
+#nome{
+    width: 280px;
+    
+}
+#bau:hover{
+     scale: 1.1;
+}
+#slogan{
+    width: 280px;
+}
+#bau {
+    animation: pulse 2s infinite alternate; /* Cria a animação de "pulso" */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de escala */
+    }
+    
+    /* Define a animação de pulso */
+    @keyframes pulse {
+ from {
+transform: scale(1);
+    }
+    to {
+    transform: scale(1.1); /* Aumenta um pouco o tamanho para o efeito de pulso */
+    }
+    }
+    
+    #bau:hover {
+        transform: scale(1.15); /* Aumenta um pouco mais no hover */
+    }
+
+    /* Estilos gerais para a imagem do baú */
+.bau-index {
+    display: block; /* Ajuda a controlar margens e centralização */
+    margin-left: auto; /* Centraliza a imagem se o container permitir */
+    margin-right: auto; /* Centraliza a imagem se o container permitir */
+     /* Garante que a imagem nunca seja maior que seu container */
+    height: auto;   /* Mantém a proporção da imagem ao redimensionar a largura */
+    width: 20%;     /* Define um tamanho padrão para telas maiores, ajuste conforme necessário. O 20% original pode ser muito pequeno. */
+  }
+  
+  /* Estilos para telas menores (celulares) */
+  @media (max-width: 768px) { /* Você pode ajustar o 768px conforme necessário */
+    .bau-index {
+      width: 70%; /* Em telas menores, a imagem ocupará 80% da largura do seu container. Ajuste conforme o design desejado. */
+      /* Se você quiser que ocupe quase toda a largura: width: 90%; ou width: 100%; */
+    }
+  }
+  
+  @media (max-width: 480px) { /* Ajustes ainda menores se necessário */
+    .bau-index {
+      width: 70%; /* Exemplo: ainda maior em telas muito pequenas */
+    }
+  }
